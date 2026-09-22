@@ -1,0 +1,26 @@
+from pydantic import BaseModel, Field
+
+
+class ParkinsonsFeatures(BaseModel):
+    MDVP_Fo: float = Field(..., description="Average vocal fundamental frequency")
+    MDVP_Fhi: float = Field(..., description="Maximum vocal fundamental frequency")
+    MDVP_Flo: float = Field(..., description="Minimum vocal fundamental frequency")
+    MDVP_Jitter_percent: float = Field(..., description="Jitter percentage")
+    MDVP_Jitter_Abs: float = Field(..., description="Absolute jitter")
+    MDVP_RAP: float = Field(..., description="Relative Average Perturbation")
+    MDVP_PPQ: float = Field(..., description="Five-point Period Perturbation Quotient")
+    Jitter_DDP: float = Field(..., description="Jitter DDP")
+    MDVP_Shimmer: float = Field(..., description="Shimmer")
+    MDVP_Shimmer_dB: float = Field(..., description="Shimmer in decibels")
+    Shimmer_APQ3: float = Field(..., description="Three-point Amplitude Perturbation Quotient")
+    Shimmer_APQ5: float = Field(..., description="Five-point Amplitude Perturbation Quotient")
+    MDVP_APQ: float = Field(..., description="Amplitude Perturbation Quotient")
+    Shimmer_DDA: float = Field(..., description="Shimmer DDA")
+    NHR: float = Field(..., description="Noise-to-Harmonics Ratio")
+    HNR: float = Field(..., description="Harmonics-to-Noise Ratio")
+    RPDE: float = Field(..., description="Recurrence Period Density Entropy")
+    DFA: float = Field(..., description="Detrended Fluctuation Analysis")
+    spread1: float = Field(..., description="Nonlinear spread measure 1")
+    spread2: float = Field(..., description="Nonlinear spread measure 2")
+    D2: float = Field(..., description="Correlation dimension")
+    PPE: float = Field(..., description="Pitch Period Entropy")
